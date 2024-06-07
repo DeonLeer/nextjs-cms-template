@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   webpack: (cfg) => {
       cfg.module.rules.push(
@@ -10,4 +12,15 @@ module.exports = {
       return cfg
   },
   output: 'export',
-}
+  pageExtensions: ['js', 'jsx', 'ts', 'tsx'],
+  trailingSlash: true,
+//   async redirects() {
+//     return [
+//         {
+//             source: '/src/pages',
+//             destination: '/',
+//             permanent: true,
+//         },
+//     ];
+//   },
+};
